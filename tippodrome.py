@@ -12,12 +12,14 @@ def isPalindrome(x):
     return True
 
 if '__main__' == __name__:
-    
-    trial = float(sys.argv[1])
+
+    original = float(sys.argv[1])
 
     operand = float(sys.argv[2])
 
-    candidrome = trial + (trial * 0.15)
+    tip = float(sys.argv[3])
+
+    candidrome = original + (original * tip)
 
     print(candidrome)
     candidrome = round(candidrome, 2)
@@ -29,5 +31,6 @@ if '__main__' == __name__:
         print(candidrome)
 
     if isPalindrome(candidrome):
-        print( "It's a Palindrome! " + str(candidrome) )
+        result = candidrome - original
+        print( "It's a Palindrome!\n" + str(result) + " + " + str(original) + " = " + str(candidrome) )
     
